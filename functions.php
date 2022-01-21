@@ -130,14 +130,14 @@ new image size.
 
 /************* THEME CUSTOMIZE *********************/
 
-/* 
+/*
   A good tutorial for creating your own Sections, Controls and Settings:
   http://code.tutsplus.com/series/a-guide-to-the-wordpress-theme-customizer--wp-33722
-  
+
   Good articles on modifying the default options:
   http://natko.com/changing-default-wordpress-theme-customization-api-sections/
   http://code.tutsplus.com/tutorials/digging-into-the-theme-customizer-components--wp-27162
-  
+
   To do:
   - Create a js for the postmessage transport method
   - Create some sanitize functions to sanitize inputs
@@ -147,7 +147,7 @@ new image size.
 function bones_theme_customizer($wp_customize) {
   // $wp_customize calls go here.
   //
-  // Uncomment the below lines to remove the default customize sections 
+  // Uncomment the below lines to remove the default customize sections
 
   // $wp_customize->remove_section('title_tagline');
   // $wp_customize->remove_section('colors');
@@ -157,7 +157,7 @@ function bones_theme_customizer($wp_customize) {
 
   // Uncomment the below lines to remove the default controls
   // $wp_customize->remove_control('blogdescription');
-  
+
   // Uncomment the following to change the default section titles
   // $wp_customize->get_section('colors')->title = __( 'Theme Colors' );
   // $wp_customize->get_section('background_image')->title = __( 'Images' );
@@ -167,7 +167,7 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 
 /************* FRONT PAGE CUSTOMIZER [DANGER CODE] *********************/
 function dc_front_page_customizer( $wp_customize ) {
-    
+
     //
     $wp_customize->add_panel( 'dc_front_page_panel', array(
         'priority'       => 35,
@@ -176,7 +176,7 @@ function dc_front_page_customizer( $wp_customize ) {
         'title'      => __('Front Page','dangercode'),
         'description' => 'Options for the Front Page',
     ) );
-    
+
     // Add Front Page Section
 /*    $wp_customize->add_section( 'dc_front_page_section' , array(
         'title'      => __('Front Page','dangercode'),
@@ -204,23 +204,23 @@ function dc_front_page_customizer( $wp_customize ) {
         'description'    => 'Right section of content',
         'panel'  => 'dc_front_page_panel',
     ) );
-    
+
     // Add Settings
     $wp_customize->add_setting( 'dc_front_page_left_text' );
     $wp_customize->add_setting( 'dc_front_page_left_link' );
     $wp_customize->add_setting( 'dc_front_page_left_page' );
-    
+
     $wp_customize->add_setting( 'dc_front_page_center_text' );
     $wp_customize->add_setting( 'dc_front_page_center_link' );
     $wp_customize->add_setting( 'dc_front_page_center_page' );
-    
+
     $wp_customize->add_setting( 'dc_front_page_right_text' );
     $wp_customize->add_setting( 'dc_front_page_right_link' );
     $wp_customize->add_setting( 'dc_front_page_right_page' );
 
     /************************* LEFT *************************/
     // Add control for Text Block
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_front_page_left_text',
         array(
             'label' => 'Text',
@@ -228,9 +228,9 @@ function dc_front_page_customizer( $wp_customize ) {
             'type' => 'textarea',
         )
     );
-    
+
     // Add control for Link Text
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_front_page_left_link',
         array(
             'label' => 'Link Text',
@@ -238,9 +238,9 @@ function dc_front_page_customizer( $wp_customize ) {
             'type' => 'text',
         )
     );
-    
+
     // Add control for Page
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_front_page_left_page',
         array(
             'label' => 'Link To',
@@ -251,7 +251,7 @@ function dc_front_page_customizer( $wp_customize ) {
 
     /************************* CENTER *************************/
     // Add control for Text Block
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_front_page_center_text',
         array(
             'label' => 'Text',
@@ -259,9 +259,9 @@ function dc_front_page_customizer( $wp_customize ) {
             'type' => 'textarea',
         )
     );
-    
+
     // Add control for Link Text
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_front_page_center_link',
         array(
             'label' => 'Link Text',
@@ -269,9 +269,9 @@ function dc_front_page_customizer( $wp_customize ) {
             'type' => 'text',
         )
     );
-    
+
     // Add control for Page
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_front_page_center_page',
         array(
             'label' => 'Link To',
@@ -279,10 +279,10 @@ function dc_front_page_customizer( $wp_customize ) {
             'type' => 'dropdown-pages',
         )
     );
-    
+
     /************************* RIGHT *************************/
     // Add control for Text Block
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_front_page_right_text',
         array(
             'label' => 'Text',
@@ -290,9 +290,9 @@ function dc_front_page_customizer( $wp_customize ) {
             'type' => 'textarea',
         )
     );
-    
+
     // Add control for Link Text
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_front_page_right_link',
         array(
             'label' => 'Link Text',
@@ -300,9 +300,9 @@ function dc_front_page_customizer( $wp_customize ) {
             'type' => 'text',
         )
     );
-    
+
     // Add control for Page
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_front_page_right_page',
         array(
             'label' => 'Link To',
@@ -318,7 +318,7 @@ add_action( 'customize_register', 'dc_front_page_customizer' );
 function dc_logo_uploader( $wp_customize ) {
     // Add Settings
     $wp_customize->add_setting( 'dc_logo' );
-    
+
     // Add Controls
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'dc_logo', array(
         'label'    => __( 'Logo', 'dangercode' ),
@@ -361,7 +361,7 @@ function bones_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-    
+
     // Primary Footer Widgets
     register_sidebar(array(
 		'id' => 'footer_widgets_center',
@@ -372,7 +372,7 @@ function bones_register_sidebars() {
 		'before_title' => '<div class="widgettitle">',
 		'after_title' => '</div>',
 	));
-    
+
     // Secondary Footer Widgets
     register_sidebar(array(
 		'id' => 'footer_widgets_right',
@@ -452,7 +452,7 @@ function dc_business_info_customizer( $wp_customize ) {
             'priority' => 35,
         )
     );
-    
+
     /* Add Text Block */
     $wp_customize->add_setting( 'dc_business_info_phone' ); // Business Phone
     $wp_customize->add_setting( 'dc_business_info_phone_tagline' ); // Business Phone Tagline
@@ -462,9 +462,9 @@ function dc_business_info_customizer( $wp_customize ) {
     $wp_customize->add_setting( 'dc_business_info_service_area' ); // Service Area
     $wp_customize->add_setting( 'dc_business_info_warranty' ); // Warranty
     $wp_customize->add_setting( 'dc_business_info_licenses' ); // Licenses
-         
+
     // Add controls
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_business_info_phone',
         array(
             'label' => 'Phone Number',
@@ -472,7 +472,7 @@ function dc_business_info_customizer( $wp_customize ) {
             'type' => 'text',
         )
     );
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_business_info_phone_tagline',
         array(
             'label' => 'Phone Tagline',
@@ -480,7 +480,7 @@ function dc_business_info_customizer( $wp_customize ) {
             'type' => 'text',
         )
     );
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_business_info_phone_tagline_link',
         array(
             'label' => 'Link To',
@@ -488,7 +488,7 @@ function dc_business_info_customizer( $wp_customize ) {
             'type' => 'dropdown-pages',
         )
     );
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_business_info_office_hours',
         array(
             'label' => 'Office Hours',
@@ -496,7 +496,7 @@ function dc_business_info_customizer( $wp_customize ) {
             'type' => 'textarea',
         )
     );
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_business_info_service_hours',
         array(
             'label' => 'Service Hours',
@@ -504,7 +504,7 @@ function dc_business_info_customizer( $wp_customize ) {
             'type' => 'textarea',
         )
     );
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_business_info_service_area',
         array(
             'label' => 'Service Area',
@@ -512,7 +512,7 @@ function dc_business_info_customizer( $wp_customize ) {
             'type' => 'textarea',
         )
     );
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_business_info_warranty',
         array(
             'label' => 'Warranty',
@@ -520,7 +520,7 @@ function dc_business_info_customizer( $wp_customize ) {
             'type' => 'textarea',
         )
     );
-    $wp_customize->add_control( 
+    $wp_customize->add_control(
         'dc_business_info_licenses',
         array(
             'label' => 'Licenses',
@@ -558,10 +558,10 @@ class dc_contact_widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		echo $args['before_widget'];
-        if ( get_theme_mod( 'dc_business_info_phone' ) ) : 
+        if ( get_theme_mod( 'dc_business_info_phone' ) ) :
         ?>
             <a href="tel://<?php echo get_theme_mod( 'dc_business_info_phone' );?>"><?php echo get_theme_mod( 'dc_business_info_phone' );?></a>
-        <?php 
+        <?php
         endif;
         if( get_theme_mod( 'dc_business_info_phone_tagline_link' ) ){
             echo '<a href="'. get_permalink( get_theme_mod( 'dc_business_info_phone_tagline_link' ) ).'">';
@@ -585,10 +585,10 @@ class dc_contact_widget extends WP_Widget {
 		$email = !empty( $instance['email'] ) ? $instance['email'] : __( 'New Email', 'text_domain' );
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Contact Email Address:' ); ?></label> 
+		<label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Contact Email Address:' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo esc_attr( $email ); ?>">
 		</p>
-		<?php 
+		<?php
 	}
 
 	/**
@@ -645,7 +645,7 @@ class dc_icon_widget extends WP_Widget {
 		echo $args['before_widget'];
         if ( !empty( $instance['url'] ) ){
             $url = $instance['url'];
-            if( strtolower(substr($link,0,4)) != 'http' ) $url = "http://" . $url;
+            if( strtolower(substr($url,0,4)) != 'http' ) $url = "http://" . $url;
             echo '<a href="'.$url.'">';
         }
         if( !empty($instance['icon']) ){
@@ -680,16 +680,16 @@ class dc_icon_widget extends WP_Widget {
 		$icon = ! empty( $instance['icon'] ) ? $instance['icon'] : __( 'New Icon', 'text_domain' );
 		?>
 		<p>
-            <label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'URL to link to:' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'URL to link to:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'url' ); ?>" name="<?php echo $this->get_field_name( 'url' ); ?>" type="text" value="<?php echo esc_attr( $url ); ?>">
 		</p>
-        <label for="<?php echo $this->get_field_id('text'); ?>">Icon: 
+        <label for="<?php echo $this->get_field_id('text'); ?>">Icon:
             <select class='widefat' id="<?php echo $this->get_field_id('icon'); ?>" name="<?php echo $this->get_field_name('icon'); ?>" type="text">
                 <option value='bbb'<?php echo ($icon=='bbb')?'selected':''; ?>>Better Business Bureau</option>
-                <option value='angies'<?php echo ($icon=='angies')?'selected':''; ?>>Angie's List</option> 
-            </select>                
+                <option value='angies'<?php echo ($icon=='angies')?'selected':''; ?>>Angie's List</option>
+            </select>
         </label>
-		<?php 
+		<?php
 	}
 
 	/**
@@ -747,9 +747,9 @@ function dc_facebook_tags() {
         <meta property="og:type" content="website" />
 
         <?php if( get_theme_mod( 'dc_facebook_og_image' ) ) : ?>
-            <meta property="og:image" content="<?php echo get_theme_mod( 'dc_facebook_og_image' ); ?>"/>  
+            <meta property="og:image" content="<?php echo get_theme_mod( 'dc_facebook_og_image' ); ?>"/>
         <?php elseif( get_theme_mod( 'dc_logo' ) ) : ?>
-            <meta property="og:image" content="<?php echo get_theme_mod( 'dc_logo' ); ?>"/>  
+            <meta property="og:image" content="<?php echo get_theme_mod( 'dc_logo' ); ?>"/>
         <?php endif; ?>
 
     <?php
@@ -761,11 +761,11 @@ function dc_facebook_tags() {
         <meta property="og:description" content="<?php the_excerpt() ?>" />
         <meta property="og:type" content="article" />
 
-        <?php 
+        <?php
         if ( has_post_thumbnail() ) :
-            $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ); 
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
         ?>
-            <meta property="og:image" content="<?php echo $image[0]; ?>"/>  
+            <meta property="og:image" content="<?php echo $image[0]; ?>"/>
         <?php endif; ?>
 
     <?php
@@ -777,7 +777,7 @@ function dc_facebook_tags() {
 function dc_facebook_og_image( $wp_customize ) {
     // Add setting
     $wp_customize->add_setting( 'dc_facebook_og_image' );
-    
+
     // Add control
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'dc_facebook_og_image', array(
         'label'         => __( 'Facebook OpenGraph Image', 'dangercode' ),
