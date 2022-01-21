@@ -1,0 +1,117 @@
+/******************************************************************
+Site Name: Callahan Electric
+Author: Will Christenson [Danger Code]
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+BASIC COLORS
+FROM http://clrs.cc/
+*********************/
+// Cool
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime:  #01FF70;
+
+// Warm
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+
+// Gray Scale
+$white:  #fff;
+$silver: #ddd;
+$gray:   #aaa;
+$grey:   $gray;
+$black:  #111;
+
+/*********************
+BONES COLORS
+*********************/
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$light-gray:        #F1F1F1;
+$text-color:        #5c6b80;
+$meta-gray:         #9fa6b4;
+
+$tan:               #eceee5;
+$bones-pink:        #f01d4f;
+$dark_teal:         #2A6E93;
+
+/*********************
+THEME COLORS
+*********************/
+$almost_white:      #F9F9F9;
+$pale_gray:         #F1F1F1;
+$mid_gray:          #AAA9A7;
+$dark_gray:         #5D5D5D;
+$lime_green:        #C3CF4F;
+$kelly_green:       #006838;
+
+/*********************
+COLOR USAGE
+*********************/
+$body_bg:           $white;
+$body_text:         $black;
+
+$header_bg:         $body_bg;
+$header_text:       $dark_gray;
+
+$footer_bg:         $dark_gray;
+$footer_text:       $white;
+$footer_hover:      $lime_green;
+$copyright_color:   $white;
+
+$link-color:        $lime_green;
+$link-hover:        $kelly_green;
+
+$nav_text:          $black;
+$nav_link:          $black;
+$nav_link_hover:    $lime_green;
+$nav_link_active:   $black;
+
+$button_bg:         $lime_green;
+$button_text:       $dark_gray;
+
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;
+$hr_color:          $lime_green;
+
+$slider_border:     $lime_green;
+
+$header_phone_text:     $dark_gray;
+$header_phone_hover:    $black;
+$header_phone_bg:       $lime_green;
+/*********************
+SIZING
+*********************/
+$theme_width:       90%;
+$theme_max_width:   1200px;
+
+$social_media_size: 34px;
+
+$nav_item_width: 135px;
+$nav_item_width_lg: 185px;
+
+$logo_height: 140px;
+$logo_height_lg: 180px;
+
+$nav_logo_width: 175px;
+$nav_logo_width_lg: 250px;

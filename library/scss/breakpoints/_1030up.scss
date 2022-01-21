@@ -1,0 +1,31 @@
+/******************************************************************
+Site Name: Callahan Electric
+Author: Will Christenson [Danger Code]
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+.wrap {
+  width: 1040px;
+}
+
+/*********************
+PRIMARY NAV [DANGER CODE]
+*********************/
+#menu-primary-nav {
+    li {
+        a {
+            font-size: 1.2em;
+            width: $nav_item_width_lg;
+            top: -(($logo_height_lg / 2) - 20px);
+        }
+    }
+    #site-logo-nav {
+        height: $logo_height_lg;
+        width: $nav_logo_width_lg;
+    }
+}

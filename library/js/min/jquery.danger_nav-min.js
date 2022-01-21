@@ -1,0 +1,1 @@
+jQuery(".menu_button").on("click",function(){var t=jQuery(this).attr("data-target");jQuery("#"+t).toggleClass("danger_nav_open")});

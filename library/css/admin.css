@@ -1,0 +1,18 @@
+/******************************************************************
+Site Name: Callahan Electric
+Author: Will Christenson [Danger Code]
+
+Stylesheet: Admin Stylesheet
+
+If you like living on the edge, you can add some styles here to
+customize the dashboard and WordPress admin area. This stylesheet
+is empty, but you can just start dropping your styles here to
+start customizing. All admin functions are located in lib/admin/
+
+******************************************************************/
+.no-sidebar .media-sidebar,
+.no-sidebar .media-frame-menu .media-menu a,
+.no-sidebar .media-frame-menu .media-menu div,
+.no-sidebar .media-toolbar-secondary,
+.no-sidebar .media-frame .attachment .describe {
+  display: block !important; }
